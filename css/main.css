@@ -19,7 +19,7 @@ body {
   flex-direction: column;
   justify-content: flex-start;
 
-  height: auto;
+  height: 100%;
   width: 60vw;
   gap: 5vh;
 }
