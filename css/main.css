@@ -1,7 +1,7 @@
 html,
 body {
   width: 100%;
-  min-height: 100vh;
+  min-height: 100%;
   height: auto;
 }
 
@@ -18,7 +18,7 @@ body {
   align-items: center;
   flex-direction: column;
   justify-content: flex-start;
-
+  margin-top: 5vh;
   height: 100%;
   width: 60vw;
   gap: 5vh;
