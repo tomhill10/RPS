@@ -8,6 +8,7 @@ const chosenPMsg = document.getElementById("chosenP");
 const chosenCMsg = document.getElementById("chosenC");
 const winBanner = document.getElementById("winConditionBanner");
 const loseBanner = document.getElementById("loseConditionBanner");
+const iconsPlayer = document.querySelectorAll(".card");
 let userInt = "";
 let computerInt = "";
 let outcomeMessageResult = "";
@@ -25,6 +26,8 @@ playerRock.addEventListener("click", function () {
   userInt = "Rock";
   computerInt = getComputerInt();
   const result = whoWins(userInt, computerInt);
+  disableButtons();
+
   if (result === 1) {
     showMatchMessage(computerInt, userInt);
     updatePlayerWins();
@@ -36,13 +39,16 @@ playerRock.addEventListener("click", function () {
   }
   setTimeout(function () {
     checkWinCon();
-  }, 2000);
+  }, 1500);
+  setTimeout(() => enableButtons(), 2500);
 });
 
 playerPaper.addEventListener("click", function () {
   userInt = "Paper";
   computerInt = getComputerInt();
   const result = whoWins(userInt, computerInt);
+  disableButtons();
+
   if (result === 1) {
     showMatchMessage(computerInt, userInt);
     updatePlayerWins();
@@ -54,13 +60,16 @@ playerPaper.addEventListener("click", function () {
   }
   setTimeout(function () {
     checkWinCon();
-  }, 2000);
+  }, 1500);
+  setTimeout(() => enableButtons(), 2500);
 });
 
 playerScissors.addEventListener("click", function () {
   userInt = "Scissors";
   computerInt = getComputerInt();
   const result = whoWins(userInt, computerInt);
+  disableButtons();
+
   if (result === 1) {
     showMatchMessage(computerInt, userInt);
     updatePlayerWins();
@@ -72,7 +81,8 @@ playerScissors.addEventListener("click", function () {
   }
   setTimeout(function () {
     checkWinCon();
-  }, 2000);
+  }, 1500);
+  setTimeout(() => enableButtons(), 2500);
 });
 
 function whoWins(player, computer) {
@@ -119,7 +129,7 @@ function showMatchMessage(computerInput, userInput) {
     chosenPMsg.textContent = "";
     chosenCMsg.textContent = "";
     outcomeMsg.textContent = "";
-  }, 3000);
+  }, 2500);
 }
 
 function checkWinCon() {
@@ -128,5 +138,23 @@ function checkWinCon() {
   }
   if (computerWins >= 3) {
     loseBanner.style.display = "flex";
+  }
+}
+
+function enableButtons() {
+  for (const thing of iconsPlayer) {
+    thing.setAttribute("class", "card");
+    playerRock.style.color = "white";
+    playerPaper.style.color = "white";
+    playerScissors.style.color = "white";
+  }
+}
+
+function disableButtons() {
+  for (const thing of iconsPlayer) {
+    thing.setAttribute("class", "card disable");
+    playerRock.style.color = "grey";
+    playerPaper.style.color = "grey";
+    playerScissors.style.color = "grey";
   }
 }

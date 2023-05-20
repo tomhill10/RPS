@@ -2,7 +2,7 @@ html,
 body {
   width: 100%;
   min-height: 100%;
-  height: auto;
+  height: 100%;
 }
 
 body {
@@ -177,4 +177,9 @@ body {
   transition: 0.2s;
   padding: 25px;
   box-shadow: 5px 5px 0px 5px var(--color-text-light);
+}
+
+.disable {
+  pointer-events: none;
+  color: var(--color-background);
 }
