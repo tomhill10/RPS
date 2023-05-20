@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/root.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/mediaQ.css" />
+    <script src="./scripts/app.js" defer></script>
+    <title>Rock - Paper - Scissors!</title>
+  </head>
+  <body>
+    <div class="app" id="app">
+      <div class="header">
+        <h1 class="header-h1">ROCK - PAPER - SCISSORS!</h1>
+      </div>
+      <h1>First to 3 wins!</h1>
+
+      <div class="cardContainer">
+        <div class="card">
+          <i class="fa fa-hand-rock-o" aria-hidden="true" id="rock"></i>
+        </div>
+        <div class="card">
+          <i class="fa fa-hand-paper-o" aria-hidden="true" id="paper"></i>
+        </div>
+        <div class="card">
+          <i class="fa fa-hand-scissors-o" aria-hidden="true" id="scissors"></i>
+        </div>
+      </div>
+
+      <div class="matchOutcome">
+        <div class="messageWrapper">
+          <h2 id="chosenP"></h2>
+          <h2 id="chosenC"></h2>
+        </div>
+        <h2 id="outcomeMessage"></h2>
+      </div>
+      <div class="scores-container">
+        <h2 class="computer-score" id="plWins">Player Wins: 0</h2>
+        <h2 class="player-score" id="comWins">Computer Wins: 0</h2>
+      </div>
+    </div>
+
+    <div
+      class="winConditionBanner-Wrapper banner-wrapper"
+      id="winConditionBanner"
+    >
+      <div class="banner-card">
+        <h1 class="winCon-h1 banner-h1">You WIN!</h1>
+        <i class="fa fa-thumbs-o-up banner-icon" aria-hidden="true"></i>
+        <a class="winCon-p banner-a" href="./index.html">Play again</a>
+      </div>
+    </div>
+
+    <div
+      class="loseConditionBanner-Wrapper banner-wrapper"
+      id="loseConditionBanner"
+    >
+      <div class="banner-card">
+        <h1 class="winCon-h1 banner-h1">You lose!</h1>
+        <i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
+        <a class="winCon-p banner-a" href="./index.html">Play again</a>
+      </div>
+    </div>
+  </body>
+</html>

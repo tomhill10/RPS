@@ -1,0 +1,53 @@
+@media only screen and (max-width: 1170px) {
+  .app {
+    height: 90vh;
+    justify-content: space-between;
+    gap: 2vh;
+  }
+  .header h1 {
+    font-size: 25px;
+  }
+  .app > h1 {
+    display: none;
+  }
+  .card i:hover {
+    font-size: 30px;
+    transition: 0.2s;
+    cursor: pointer;
+  }
+  .app {
+    width: 90vw;
+  }
+  .card {
+    width: 90%;
+    height: 10vh;
+  }
+  .messageWrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3vh;
+  }
+  .card i {
+    font-size: 30px;
+  }
+  .matchOutcome h2 {
+    font-size: 30px;
+  }
+  .banner-wrapper {
+    font-size: 50px;
+  }
+  .banner-card {
+    width: 60vw;
+  }
+  .banner-a {
+    font-size: 30px;
+  }
+  .scores-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1vh;
+  }
+  .scores-container h2 {
+    font-size: 30px;
+  }
+}
